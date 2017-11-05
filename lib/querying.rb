@@ -8,12 +8,13 @@ end
 
 
 def select_value_and_count_of_most_prolific_species
-  "SELECT species, COUNT(*) FROM characters GROUP BY species ORDER BY COUNT (species) DESC LIMIT 1"
-  # tables with data: characters (count & name of highest # of species) total of? AS?
+  "SELECT species, COUNT(*) FROM characters GROUP BY species ORDER BY COUNT(species) DESC LIMIT 1"
+  # tables with data: characters (count & name of highest # of species)
 end
 
 def select_name_and_series_subgenres_of_authors
-  "Write your SQL query here"
+  "SELECT authors.name, subgenres.name FROM authors JOIN series ON series.author_id = authors.id JOIN subgenres ON series.subgenre_id = subgenre_id"
+  # tables: subgenres, authors, series requires JOINs. Name = 1st item, authors = 1st table to join to 2nd item (series)
 end
 
 def select_series_title_with_most_human_characters
